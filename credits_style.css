@@ -1,0 +1,111 @@
+/* full-width, fixed-height credits banner */
+.credits-belt {
+  display: flex;
+  width: 100%;
+  height: 15vh; /* banner height */
+  margin: 40px 0;
+  line-height: 0;
+  overflow: hidden;
+  justify-content: center;
+}
+
+/* credits belt image tiles */
+.credits-belt img.tile {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+/* orange "credits" tile */
+.credits-belt .credits-tile {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f28c28;
+  padding: 0 24px; /* give text breathing room */
+  flex: 0 0 auto;
+  box-sizing: border-box; /* include padding in width */
+}
+
+/* credits title */
+.credits-belt .credits-tile #credits-title {
+  font-weight: 900;
+  font-size: 10vh;
+  margin: 0;
+}
+
+/* grid of images in the credits section */
+.headshots-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns for each image*/
+  justify-items: center;
+}
+
+/* container of the images */
+.headshot-frame {
+  position: relative;
+  border: 6px solid #2c0033;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* each image */
+.headshot-frame img {
+  width: 100%;
+  max-width: 21vw;
+  height: 37.5vw;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+}
+
+/* effects on hover */
+.headshot-frame:hover {
+  transform: translateY(-5px);
+}
+
+.headshot-frame:hover img {
+  transform: scale(1.05);
+}
+
+/* style of the overlay caption section that will appear */
+.description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3vh;
+  line-height: 1.5;
+  opacity: 0; /* initially hidden */
+  transition: opacity 0.3s ease;
+}
+
+.name {
+  font-size: 3vh;
+  color: #666;
+  line-height: 1.5;
+  margin-top: 40px;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+/* overlay caption appears on hover */
+.headshot-frame:hover .description {
+  opacity: 1;
+}

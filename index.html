@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+    <link rel="stylesheet" href="index_style.css" />
+    <link rel="stylesheet" href="common.css" />
+  </head>
+  <body>
+    <!-- masthead: full-bleed background that includes header + hero -->
+    <div class="masthead">
+      <!-- nav menu section -->
+      <header class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/nyuad-logo.png" alt="NYU Abu Dhabi logo" />
+          </a>
+        </div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="credits.html">CREDITS</a></li>
+            <li><a href="about-us.html">ABOUT US</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- hero section -->
+      <section class="hero container">
+        <!-- name and info of movie -->
+        <div class="title">
+          <h1>A Typical<br />Journey to D2</h1>
+          <p class="subtitle">
+            A lighthearted short film about the everyday chaos of NYUAD's D2
+            dining hall. From battling the heat and the stubborn doors to
+            waiting in endless lines, we share a playful take on the struggles
+            every student knows all too well!
+          </p>
+        </div>
+
+        <!-- video player section -->
+        <div class="video-card">
+          <video controls>
+            <source
+              src="assets/videos/typical-journey-to-d2.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </section>
+    </div>
+    <!-- end masthead -->
+
+    <main class="container">
+      <!-- screenshots section -->
+      <section class="screenshots">
+        <div class="section-header">
+          <h2 id="screenshots-title">Screenshots</h2>
+        </div>
+
+        <div class="screenshots-grid">
+          <!-- screenshot and its caption -->
+          <figure class="screenshot">
+            <img
+              src="assets/images/screenshot1.png"
+              alt="Actor struggling to open the malfunctioning D2 dining hall doors"
+            />
+            <figcaption>
+              The real boss battle: D2's legendary malfunctioning doors.
+            </figcaption>
+          </figure>
+
+          <figure class="screenshot">
+            <img
+              src="assets/images/screenshot2.png"
+              alt="Actor waiting in a long line at a D2 dining hall counter"
+            />
+            <figcaption>
+              By the time you reach a counter at D2, you've already aged a
+              semester.
+            </figcaption>
+          </figure>
+
+          <figure class="screenshot">
+            <img
+              src="assets/images/screenshot3.png"
+              alt="Actor looking at a meal swipe balance screen showing no swipes left"
+            />
+            <figcaption>
+              At D2, your meal swipes disappear faster than your GPA during
+              finals.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- follow us on social media footer section -->
+      <section class="socials">
+        <h3 id="follow-title">FOLLOW US</h3>
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/NYUAD/" target="_blank">
+              <img src="assets/images/facebook.png" alt="Facebook logo" />
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/NYUAbuDhabi" target="_blank">
+              <img src="assets/images/twitter.png" alt="Twitter logo" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/nyuad.eats" target="_blank">
+              <img src="assets/images/instagram.png" alt="Instagram logo" />
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <!-- div for lightbox pop up of the images -->
+    <div id="lightbox" class="lb-overlay">
+      <button class="lb-close">×</button>
+      <figure class="lb-content">
+        <img src="" alt="" />
+        <figcaption></figcaption>
+      </figure>
+    </div>
+
+    <!-- adding the javascript code -->
+    <script src="lightbox.js"></script>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+/* CSS styles common to all the pages */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #2b0346;
+  background-color: #ccb5db;
+  overflow-x: hidden;
+
+  /* fade-in effect */
+  opacity: 0;
+  animation: pageFadeIn 1s ease-in forwards;
+}
+
+/* keyframes for fade in */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 10px 30px;
+}
+
+/* header / nav menu */
+header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* left | center | right */
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  justify-self: start;
+}
+
+.logo img {
+  height: 5vh;
+  width: auto;
+}
+
+nav {
+  justify-self: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 50px; /* space between each nav item */
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 2.5vh;
+  letter-spacing: 0.5px;
+}
+
+nav a:hover {
+  color: #666;
+}
+
+/* follow us on social media section */
+.socials {
+  padding: 60px 0px 0px;
+}
+
+#follow-title {
+  font-size: 2.5vh;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.social-list {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.social-list img {
+  width: 4vh;
+  height: 4vh;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.social-list a:hover img {
+  opacity: 1;
+}
+
+/* lightbox popup for each of the images */
+.lb-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0); /* start transparent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 9999;
+
+  /* animated visibility */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  /* backdrop + fade timing */
+  transition: opacity 0.28s ease, background-color 0.28s ease,
+    visibility 0s linear 0.28s; /* hide after fade-out completes */
+}
+
+/* style of overlay upon opening the image */
+.lb-overlay.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  background: rgba(0, 0, 0, 0.75);
+  transition: opacity 0.28s ease, background-color 0.28s ease, visibility 0s; /* show immediately on open */
+}
+
+.lb-content {
+  margin: 0;
+  max-width: 90vw;
+  text-align: center;
+
+  /* start slightly smaller + lower, invisible */
+  transform: translateY(12px) scale(0.98);
+  opacity: 0;
+}
+
+/* upon opening the content fully reveals and scales */
+.lb-overlay.open .lb-content {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.lb-content img {
+  display: block;
+  max-width: min(90vw, 900px);
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+  margin-inline: auto;
+}
+
+.lb-content figcaption {
+  margin-top: 12px;
+  color: #fff;
+  line-height: 1.5;
+  font-size: 3vh;
+  max-width: 80ch;
+  margin-inline: auto;
+}
+
+/* close button */
+.lb-close {
+  position: absolute;
+  top: 2vh;
+  right: 2vh;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 6vh;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* close button shows upon revealing the lightbox */
+.lb-overlay.open .lb-close {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* making all the images appear clickable */
+figure.screenshot,
+figure.headshot,
+figure.counter {
+  cursor: pointer; /* mouse pointer turns to hand */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

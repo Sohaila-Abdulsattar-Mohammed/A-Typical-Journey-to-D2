@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Credits</title>
+    <link rel="stylesheet" href="credits_style.css" />
+    <link rel="stylesheet" href="common.css" />
+  </head>
+  <body>
+    <!-- nav menu section -->
+    <header class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/nyuad-logo.png" alt="Website Logo" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#">CREDITS</a></li>
+          <li><a href="about-us.html">ABOUT US</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- decorative belt of tiles with "Credits" label in middle -->
+    <div class="credits-belt">
+      <img src="assets/images/tile-6.png" alt="" class="tile" />
+      <img src="assets/images/tile-5.png" alt="" class="tile" />
+      <img src="assets/images/tile-1.png" alt="" class="tile" />
+      <img src="assets/images/tile-2.png" alt="" class="tile" />
+      <img src="assets/images/tile-3.png" alt="" class="tile" />
+      <img src="assets/images/tile-6.png" alt="" class="tile" />
+      <img src="assets/images/tile-5.png" alt="" class="tile" />
+      <img src="assets/images/tile-1.png" alt="" class="tile" />
+      <img src="assets/images/tile-2.png" alt="" class="tile" />
+      <img src="assets/images/tile-3.png" alt="" class="tile" />
+      <div class="tile credits-tile">
+        <span id="credits-title">Credits</span>
+      </div>
+      <img src="assets/images/tile-4.png" alt="" class="tile" />
+      <img src="assets/images/tile-5.png" alt="" class="tile" />
+      <img src="assets/images/tile-6.png" alt="" class="tile" />
+      <img src="assets/images/tile-2.png" alt="" class="tile" />
+      <img src="assets/images/tile-3.png" alt="" class="tile" />
+      <img src="assets/images/tile-4.png" alt="" class="tile" />
+      <img src="assets/images/tile-5.png" alt="" class="tile" />
+      <img src="assets/images/tile-6.png" alt="" class="tile" />
+      <img src="assets/images/tile-2.png" alt="" class="tile" />
+      <img src="assets/images/tile-3.png" alt="" class="tile" />
+    </div>
+
+    <main class="container">
+      <!-- credits section -->
+      <section class="credits">
+        <!-- section of images -->
+        <div class="headshots-grid">
+          <!-- each image and its caption -->
+          <figure class="headshot">
+            <div class="headshot-frame">
+              <img
+                src="assets/images/maitha.jpg"
+                alt="Headshot of Maitha Almarzooqi"
+              />
+              <figcaption class="description">
+                Maitha is a freshman at NYU-AD, majoring in Economics. She was
+                the main actor and the face of "A Typical Journey to D2";
+                carried the story through her performance and gave life to the
+                chaos of D2 life.
+              </figcaption>
+            </div>
+            <figcaption class="name">Maitha Almarzooqi</figcaption>
+          </figure>
+
+          <figure class="headshot">
+            <div class="headshot-frame">
+              <img
+                src="assets/images/sohaila.png"
+                alt="Headshot of Sohaila Mohammed"
+              />
+              <figcaption class="description">
+                Sohaila is a senior at NYU-AD, majoring in Computer Science. She
+                was the videographer and lead editor of the film; captured the
+                journey frame by frame and stitched it all together into the
+                final film.
+              </figcaption>
+            </div>
+            <figcaption class="name">Sohaila Mohammed</figcaption>
+          </figure>
+
+          <figure class="headshot">
+            <div class="headshot-frame">
+              <img src="assets/images/yara.jpg" alt="Headshot of Yara Li" />
+              <figcaption class="description">
+                Yara is a sophomore at NYU-NY, majoring in Media, Culture, and
+                Communication. She was a videographer, supporting actor, and
+                co-editor of the film; helped behind and in front of the camera
+                while polishing the final cut.
+              </figcaption>
+            </div>
+            <figcaption class="name">Yara Li</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- follow us on social media footer section -->
+      <section class="socials">
+        <h3 id="follow-title">FOLLOW US</h3>
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/NYUAD/" target="_blank">
+              <img src="assets/images/facebook.png" alt="Facebook logo" />
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/NYUAbuDhabi" target="_blank">
+              <img src="assets/images/twitter.png" alt="Twitter logo" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/nyuad.eats" target="_blank">
+              <img src="assets/images/instagram.png" alt="Instagram logo" />
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <!-- div for lightbox pop up of the images -->
+    <div id="lightbox" class="lb-overlay">
+      <button class="lb-close">×</button>
+      <figure class="lb-content">
+        <img src="" alt="" />
+        <figcaption></figcaption>
+      </figure>
+    </div>
+
+    <!-- adding the javascript code -->
+    <script src="lightbox.js"></script>
+  </body>
+</html>

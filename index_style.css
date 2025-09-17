@@ -1,0 +1,130 @@
+/* for the background image pattern */
+.masthead {
+  background: url("assets/images/background1.png") no-repeat right top;
+  background-size: auto 95%; /* fill masthead vertically */
+  padding-bottom: 24px; /* space below hero */
+  min-height: 100vh; /* ensure full viewport height */
+}
+
+/* hero section */
+
+/* two-column layout: text on left, video on right */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3vh; /* space between text and video */
+  padding: 48px 40px 64px;
+  min-height: 75vh;
+}
+
+.title h1 {
+  font-size: 10vh;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #2b0346;
+}
+
+.subtitle {
+  font-size: 3vh;
+  color: #666;
+  line-height: 1.6;
+  max-width: 52ch;
+}
+
+/* video container design */
+.video-card {
+  justify-self: end;
+  margin-right: 80px;
+  background: #340454;
+  padding: 6px;
+  border-radius: 6px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+  width: 40vh;
+  aspect-ratio: 9 / 16;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* so video scales nicely inside container */
+.video-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* so video scales nicely when in fullscreen */
+video:fullscreen,
+video:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background: #000;
+}
+
+/* screenshots section */
+
+/* full-bleed orange banner */
+.section-header {
+  background-color: #f28c28; /* orange banner */
+  width: 100vw; /* span full viewport width */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+#screenshots-title {
+  font-size: 10vh;
+  font-weight: 900;
+  color: #2c0033;
+  margin: 0;
+  line-height: 1.4;
+  padding: 12px 0;
+}
+
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* to center captions */
+.screenshot {
+  text-align: center;
+}
+
+/* design of the image container */
+.screenshot img {
+  width: 100%;
+  max-width: 21vw;
+  height: 37.5vw;
+  object-fit: cover;
+  border: 6px solid #2c0033;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 0 auto 15px auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.screenshot figcaption {
+  font-size: 3vh;
+  color: #666;
+  line-height: 1.5;
+  margin-top: 40px;
+}
+
+/* effects on image hover */
+.screenshot img:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
