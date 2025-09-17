@@ -1,0 +1,29 @@
+# A Typical Journey to D2
+
+## Project Description
+Our short film, A Typical Journey to D2, is all about capturing what it’s like navigating D2 as an NYUAD student. It’s meant to be simple, comedic, and relatable; basically, a playful take on the little frustrations and funny moments that everyone on campus knows when it comes to the West Dining Hall.
+For the website, my idea was that it should make sense to someone who already knows enough about NYUAD to get the jokes, but also be welcoming to newer students who might still be learning the quirks of campus life. That’s why I included things like short explanations of the D2 counters, so it’s not just inside jokes, but also a way for people to actually learn more about the setting.
+The design itself balances an NYUAD theme with a dining-hall vibe. I used the university’s color palette and logo to ground it in the campus identity, while also adding playful, food-related elements to emphasize the dining angle. I wanted it to feel colorful, fun, and not too formal, as it is a website made by students, for students.
+
+## Process
+This project started with the wireframe I created for Assignment 1b on Figma. This definitely helped me map out the layout and clarify how the different sections of the site would be structured. From there, I built the basic HTML and CSS to get the initial framework of the website in place, which is what I submitted for Assignment 2b. As I mentioned there, my main goal was to get the HTML down and make sure that there is space for all the basic content of the site. I also spent some time setting up basic CSS for layout. I wasn't thinking about design polish at all, just making sure that the structure made sense, that elements were sitting in roughly the right places, and that the interactions (like hover states, flex/grid behavior, etc.) were working.
+
+But of course, I didn’t want the website to just look like a bunch of text and pictures on a page. I wanted some actual design elements that make the site feel intentional and fun. For that, I opened Canva, which is my go-to tool whenever I need to design something because I’m very comfortable using it; I often use Canva to experiment with ideas and gather inspiration. I was also able to access NYUAD’s official color palette from there, and decided to go with it for the website because I wanted to keep an NYUAD theme. It was during that process that I was inspired by the idea of using a pattern style throughout the website’s design. I began designing these square tiles that tied in both dining and university themes, and envisioning how I would lay these out in the website. 
+
+For the website’s background patterns, I used two different approaches. On the landing page and the about us page, I created the full pattern in Canva, exported it as an image, and used that image as the background in the site. I believed this was more efficient than trying to manually position each tile in the code. On the credits page, however, it wasn’t too hard to position the individual tile images as needed, so that’s what I did.
+
+Once the site was looking good visually, I also wanted to push it technically. I added some JavaScript to make the site more interactive. Since every page of the site features images, I decided to build a simple “lightbox” effect for the images, so when you click on any photo, it zooms in, the background darkens, and you see the caption clearly. I also worked in transitions so the lightbox fades in, instead of appearing abruptly, which makes the interactions feel a lot more natural. Overall, I think that added interactivity gave the site a smoother, more polished feel. 
+
+## Reflection/Evaluation
+Overall, I’m actually pretty satisfied with how my website turned out. For something that’s technically “just” a three-page site, I ended up spending a lot of time on it, mostly because I wanted it to look and feel right. One of my biggest struggles was getting the proportions and scaling to work across different screen sizes. I didn’t focus on making the site responsive for phones, but I did test it on multiple laptops, and also relied a lot on the resizing feature under Chrome’s “Inspect”.
+I feel like this was where I spent the most time, figuring out how to keep the design consistent no matter the screen. What I found really helpful (and kind of interesting) was using units like “vh” and “vw” when sizing elements. They worked surprisingly well in making things scale more smoothly, and I learned a lot about how powerful those units can be for responsive design.
+Looking back, I’m happy with the final result. It feels colorful, thematic, and fun, which was my goal. If I were to improve it further, the main thing I’d do is adapt it properly for phones, since right now it really only works well on laptops. That’s definitely something I’d want to fix if I were to continue working on it.
+
+## References
+The main external tool I used throughout this project was Generative AI, specifically ChatGPT and Claude. As I mentioned in Assignment 2b, I relied on it mostly to help me iterate through my CSS, either fixing things when they weren’t behaving as expected or explaining why something worked (or didn’t). Honestly, I’ve found that Gen-AI isn’t particularly strong when it comes to front-end development; maybe something more specialized like Cursor would be better, but I still think there’s a lot of room for improvement.
+I also used Gen-AI for JavaScript when setting up the lightbox effect for the images. It was useful in making sure the interaction worked the way I wanted and for debugging some smaller issues I ran into.
+Finally, I used Gen-AI to help with the D2 counter logos that appear in the About Us page. I originally took photos of the counters’ signs with my camera, and then used Gen-AI to generate higher-quality PNG versions of those logos so that they could fit better into the overall design of the site.
+
+
+
+
